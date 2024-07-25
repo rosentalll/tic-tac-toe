@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-size: 30px;
+  color: white;
+  background-color: rgb(2, 2, 157);
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.history-bar {
+  display: flex;
+  margin: 0 30%;
+  justify-content: space-between;
+}
+
+.history-button {
+  font-size: 0.75em;
+  background-color: white;
+}
+
+.history-button:hover {
+  background-color: rgb(223, 223, 223);
+}
+
+.history-button:active {
+  background-color: rgb(188, 188, 188);
+}
+
