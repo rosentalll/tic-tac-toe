@@ -6,6 +6,12 @@ html {
   box-sizing: inherit;
 }
 
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 body {
   margin: 0;
   font-size: 30px;
@@ -29,7 +35,7 @@ body {
   font-size: 40px
 }
 
-.history-bar {
+.buttons-bar {
   display: flex;
   margin: 0 30%;
   justify-content: space-between;
@@ -50,3 +56,10 @@ body {
   background-color: rgb(188, 188, 188);
 }
 
+@media (max-width: 768px) {
+  .buttons-bar {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
