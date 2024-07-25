@@ -13,9 +13,20 @@ body {
   background-color: rgb(2, 2, 157);
 }
 
+.title, .scoreboard {
+  text-align: center;
+}
+
 .board-row {
   display: flex;
   justify-content: center;
+}
+
+.cell {
+  width: 100px;
+  height: 100px; 
+  background-color: white; 
+  font-size: 40px
 }
 
 .history-bar {
@@ -24,16 +35,18 @@ body {
   justify-content: space-between;
 }
 
-.history-button {
+.button {
   font-size: 0.75em;
   background-color: white;
+  width: 100px;
+  height: 75px;
 }
 
-.history-button:hover {
+.button:hover {
   background-color: rgb(223, 223, 223);
 }
 
-.history-button:active {
+.button:active {
   background-color: rgb(188, 188, 188);
 }
 

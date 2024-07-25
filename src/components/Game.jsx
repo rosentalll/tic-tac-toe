@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Board from "./Board";
-import HistoryBar from "./HistoryBar";
+import ButtonsBar from "./ButtonsBar";
 import Scoreboard from "./Scoreboard";
 
 export default function Game() {
@@ -11,7 +11,6 @@ export default function Game() {
     const [winner, setWinner] = useState(null)
     const [history, setHistory] = useState([moves])
     const [currentMove, setCurrentMove] = useState(0)
-    const [phrase, setPhrase] = useState(null)
 
     const setMove = function(i) {  
        
@@ -23,7 +22,7 @@ export default function Game() {
         } else {
             newMoves[i] = "O"
         }
-        setMoves((p) => p = newMoves)
+        setMoves(newMoves)
 
         defineWinner(newMoves)
 
@@ -79,12 +78,18 @@ export default function Game() {
     }
 
     return (
-        <section className="game">
-            <Board moves={history[currentMove]} setMove={setMove} history={history} winner={winner} isX={isX} />
-            <Scoreboard winner={winner} isX={isX} phrase={`${winner} wins`} />
-            <HistoryBar history={history} currentMove={currentMove} getPreviousMove={getPreviousMove} getNextMove={getNextMove} />
-            <button onClick={restartGame} className="history-button">{"New game"}</button>
-        </section>
+        <main className="game">
+            <Board 
+                moves={history[currentMove]} 
+                setMove={setMove} 
+            />
+            <Scoreboard 
+                winner={winner} 
+                isX={isX} 
+            />
+            <ButtonsBar 
+                handlers={{getPreviousMove, getNextMove, restartGame}} 
+            />
+        </main>
     )
-
 }
