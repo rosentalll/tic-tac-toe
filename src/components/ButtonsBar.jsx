@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "./Button";
 
-export default function ButtonsBar(props) {
-    const {getPreviousMove, restartGame, getNextMove} = props.handlers
+export default function ButtonsBar({ handlers }) {
+    const {getPreviousMove, restartGame, getNextMove} = handlers
     return (
         <ul className="buttons-bar">
             <li>

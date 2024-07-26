@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Scoreboard(props) {
+export default function Scoreboard({winner, isX}) {
     return (
         <p className="scoreboard">
-            {props.winner ? `${props.winner} wins` : `Is's ${props.isX ? "X" : "O"} move`}
+            {winner ? `${winner} wins` : `Is's ${isX ? "X" : "O"} move`}
         </p>
     )
 }

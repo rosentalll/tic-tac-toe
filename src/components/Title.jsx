@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Title(props) {
+export default function Title({ title }) {
     return (
         <h1 className="title">
-            {props.title}
+            {title}
         </h1>
     )
 }
